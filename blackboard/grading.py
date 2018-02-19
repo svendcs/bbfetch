@@ -423,10 +423,37 @@ class Grading(blackboard.Serializable):
 
     def extract_zip(self, filename):
         path = os.path.dirname(filename)
-        logger.debug("Unzip archive %s", filename)
+        logger.debug("Extract zip archive %s", filename)
         import zipfile
-        with zipfile.ZipFile(filename) as zf:
-            zf.extractall(path)
+        with zipfile.ZipFile(filename) as f:
+            f.extractall(path)
+
+    def extract_rar(self, filename):
+        path = os.path.dirname(filename)
+        logger.debug("Extract rar archive %s", filename)
+        import rarfile
+        with rarfile.RarFile(filename) as f:
+            f.extractall(path)
+
+    def extract_tar(self, filename):
+        path = os.path.dirname(filename)
+        logger.debug("Extract tar archive %s", filename)
+        import tarfile
+        with tarfile.open(filename) as f:
+            f.extractall(path)
+
+    def extract_gz(self, filename):
+        # Assume tarfile
+        self.extract_tar(filename)
+
+    def extract_bz2(self, filename):
+        # Assume tarfile
+        self.extract_tar(filename)
+
+    def extract_xz(self, filename):
+        # Assume tarfile
+        self.extract_tar(filename)
+
 
     def get_attempt_files(self, attempt):
         assert isinstance(attempt, Attempt)

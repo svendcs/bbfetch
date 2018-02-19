@@ -3,3 +3,4 @@ html5lib==0.999999999
 keyring==7.3
 requests==2.9.1
 six==1.10.0
+rarfile==3.0
