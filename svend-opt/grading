@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
-source ~/Projects/bbfetch/venv/bin/activate
+source ~/Projects/bbfetch/.venv/bin/activate
 cd ~/Grading
 python3 grading.py "$@"

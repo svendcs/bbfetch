@@ -10,11 +10,11 @@ class Grading(blackboard.grading.Grading):
     # Username used to log in to Blackboard
     username = '201303589'
     # Blackboard course id (of the form '_NNNNN_1')
-    course = '_110479_1'
+    course = '_124138_1'
     # Names of classes/groups of students to display
     # If you need to grade hand-ins of all students in the course,
     # put classes = all
-    classes = ['Class 1', 'Class 2']
+    classes = ['Class 2']
     # Regex pattern and replacement text to abbreviate group names
     student_group_display_regex = (r'Class (\d+)', r'\1')
     # Regex pattern and replacement text to abbreviate handin names
