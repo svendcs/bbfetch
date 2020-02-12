@@ -188,7 +188,7 @@ class Grading(blackboard.Serializable):
             return ''
         assert isinstance(student_assignment, StudentAssignment)
         cell = []
-        for attempt in student_assignment.attempts:
+        for attempt in reversed(student_assignment.attempts):
             if attempt.needs_grading:
                 if self.has_feedback(attempt):
                     cell.append('\u21A5')  # UPWARDS ARROW FROM BAR
