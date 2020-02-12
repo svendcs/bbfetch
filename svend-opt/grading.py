@@ -10,13 +10,13 @@ class Grading(blackboard.grading.Grading):
     # Username used to log in to Blackboard
     username = '201303589'
     # Blackboard course id (of the form '_NNNNN_1')
-    course = '_124138_1'
+    course = '_133808_1'
     # Names of classes/groups of students to display
     # If you need to grade hand-ins of all students in the course,
     # put classes = all
-    classes = ['Class 2']
+    classes = ['Class DA1', 'Class DA2']
     # Regex pattern and replacement text to abbreviate group names
-    student_group_display_regex = (r'Class (\d+)', r'\1')
+    student_group_display_regex = (r'Class DA(\d+)', r'\1')
     # Regex pattern and replacement text to abbreviate handin names
     assignment_name_display_regex = (r'(\S+) compulsory assignment', r'\1')
     # Template indicating where to save each handin
@@ -39,8 +39,8 @@ class Grading(blackboard.grading.Grading):
         if attempt_id.endswith('_1'):
             attempt_id = attempt_id[:-2]
 
-        m = {'First': '1', 'Second': '2', 'Third': 3, 'Fourth': 4, 'Fifth': 5, 'Sixth': 6}
-        assignment= "Handin " + m[self.get_assignment_name_display(attempt.assignment)]
+        m = {'First': 1, 'Second': 2, 'Third': 3, 'Fourth': 4, 'Fifth': 5, 'Sixth': 6}
+        assignment= "Handin " + str(m[self.get_assignment_name_display(attempt.assignment)])
 
         return '{base}/{assignment}/{name}_{id}'.format(
             base=os.path.expanduser('~/Grading'),
