@@ -39,7 +39,8 @@ class Grading(blackboard.grading.Grading):
         if attempt_id.endswith('_1'):
             attempt_id = attempt_id[:-2]
 
-        m = {'First': 1, 'Second': 2, 'Third': 3, 'Fourth': 4, 'Fifth': 5, 'Sixth': 6}
+        m = {'First': 1, 'Second': 2, 'Third': 3, 'Fourth': 4, 'Fifth (and final) compulsory assignment': 5, 'Sixth': 6}
+        print("Mapping string", self.get_assignment_name_display(attempt.assignment))
         assignment= "Handin " + str(m[self.get_assignment_name_display(attempt.assignment)])
 
         return '{base}/{assignment}/{name}_{id}'.format(
