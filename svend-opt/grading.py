@@ -2,7 +2,7 @@ import os
 import re
 import sys
 # Path to bbfetch repository
-sys.path += [os.path.expanduser('~/Projects/bbfetch')]
+sys.path += [os.path.expanduser('~/projects/bbfetch')]
 import blackboard.grading
 
 

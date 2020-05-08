@@ -12,19 +12,19 @@ pip3 install -r requirements.txt
 
 Next, create the grading directory and link files:
 ```
-mkdir ~/Grading
-cd ~/Grading
-ln ~/Projects/bbfetch/svend-opt/grading .
-ln ~/Projects/bbfetch/svend-opt/grading.py .
+mkdir ~/grading
+cd ~/grading
+ln ~/projects/bbfetch/svend-opt/grading .
+ln ~/projects/bbfetch/svend-opt/grading.py .
 ```
 Next open the file grading.py and file out the correct username and classes.
 
 ### Usage
 
-Simply run the shell script `./Grading/grading`, which will activate the
+Simply run the shell script `./grading/grading`, which will activate the
 virtual environment and run your file `grading.py`:
 ```
-cd ~/Grading
+cd ~/grading
 ./grading --help
 ```
 
