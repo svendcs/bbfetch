@@ -44,7 +44,7 @@ class Grading(blackboard.grading.Grading):
         assignment= "Handin " + str(m[self.get_assignment_name_display(attempt.assignment)])
 
         return '{base}/{assignment}/{name}_{id}'.format(
-            base=os.path.expanduser('~/Grading'),
+            base=os.path.expanduser('~/grading'),
             assignment=assignment,
             name=name, id=attempt_id)
 
